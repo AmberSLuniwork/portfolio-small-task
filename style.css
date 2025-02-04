@@ -1,0 +1,113 @@
+html{
+    background-color: #FBFBF2;
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+article{
+    padding: 2%;
+}
+
+/* header stuff. */
+header{
+    display: flex;
+    width: 100vw;
+    background-color: #2E2C2A;
+    align-items: center;
+    height: 100px;
+}
+#logo{
+    float: left;
+    width: 30%;
+    padding-left: 2%;
+    z-index: 1;
+    text-shadow: 0px 0px 20px #000000;
+}
+#headervideo{
+    margin: 0;
+    width: 70%;
+    float: right;
+    height: 100%;
+    object-fit: cover;
+}
+#headerimage{
+    display: none; /* want to hide this by default. */
+}
+@media (max-width: 975px) {
+    #headervideo {
+        display: none; /*The video starts to shrink and you can see the borders, so I'm replacing it with an image instead.*/
+    }
+    header{
+        background-image:url('./assets/stillheaderbackround.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    h1 #logo{
+        background-color: #2e2c2ad7;
+    }
+}
+
+/*Nav*/
+
+nav{
+    display: flex;
+    align-items: center;
+    background-color: #2E2C2A;
+    margin-top: 0px;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+}
+nav ul li{
+    display: inline;
+    padding: 10px;
+}
+
+a.navtext {
+    text-decoration: none;
+    font-size: 1.25em;
+}
+a.navtext{
+    color: #CFD2CD;
+}
+
+nav ul li a:hover{
+    font-weight: bold;
+    color: white;
+}
+
+/* text */
+
+h1, h2, h3, h4, h5, a.navtext{
+    font-family:'Josefin Slab';
+}
+h1{
+    color: #CFD2CD;
+    font-size: 3em;
+    font-weight: bold;
+}
+h2{
+    color: #2E2C2A;
+    font-size: 2em;
+    font-weight: bold;
+}
+h3{
+    color: #676561;
+    font-weight: bold;
+}
+h4{
+    color: #676561;
+    font-weight: bold;
+}
+h5{
+    color: #676561;
+    font-style: italic;
+    font-weight: bold;
+}
+p{
+    font-family: 'Josefin Sans';
+    color: #2E2C2A;
+}
+
