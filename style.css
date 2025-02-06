@@ -3,19 +3,51 @@ html{
     margin: 0;
 }
 body{
+    display: flex;
+    flex-direction: column;
     margin: 0;
+    min-height: 100vh;
 }
 article{
     padding: 2%;
 }
 
+/*Main article with the showcase and supplementary text.*/
+section.showcasecontainer{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+article.textcontent{
+    flex: 2;
+}
+article.imagecontent{
+    flex: 1;
+}
+.imagecontent img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width:800px){
+    section.showcasecontainer{
+        flex-direction: column;
+    }
+    .imagecontent{
+        order: -1;
+    }
+}
+
 /* header stuff. */
 header{
     display: flex;
-    width: 100vw;
+    width: 100%;
     background-color: #2E2C2A;
     align-items: center;
     height: 100px;
+    overflow: hidden;
 }
 #logo{
     float: left;
@@ -52,22 +84,24 @@ header{
 
 nav{
     display: flex;
-    align-items: center;
+    align-items:center;
     background-color: #2E2C2A;
     margin-top: 0px;
 }
 nav ul{
     width: 100%;
     list-style: none;
+    text-align: center;
 }
 nav ul li{
-    display: inline;
+    display: inline-block;
     padding: 10px;
 }
 
 a.navtext {
     text-decoration: none;
     font-size: 1.25em;
+    display: block;
 }
 a.navtext{
     color: #CFD2CD;
@@ -78,36 +112,69 @@ nav ul li a:hover{
     color: white;
 }
 
+/*footer*/
+footer{
+    bottom: 0px;
+    display: flex;
+    background-color: #2E2C2A;
+    padding: 10px 2%;
+    justify-content: space-between;
+}
+
 /* text */
 
 h1, h2, h3, h4, h5, a.navtext{
     font-family:'Josefin Slab';
 }
-h1{
+h1#logo{
     color: #CFD2CD;
     font-size: 3em;
     font-weight: bold;
 }
+h1{
+    font-weight: bold;
+    font-size: 2.5em;
+}
 h2{
     color: #2E2C2A;
-    font-size: 2em;
     font-weight: bold;
+    font-size: 2em;
 }
 h3{
     color: #676561;
     font-weight: bold;
+    font-size: 1.5em;
 }
 h4{
     color: #676561;
     font-weight: bold;
+    font-size: 1.25em;
 }
 h5{
     color: #676561;
     font-style: italic;
     font-weight: bold;
+    font-size: 1em;
 }
 p{
     font-family: 'Josefin Sans';
     color: #2E2C2A;
 }
 
+p.subtitle{
+    font-style: italic;
+    margin-left: 25px;
+    margin-top: -20px;
+}
+
+footer p{
+    color: #CFD2CD;
+}
+
+a.footerref{
+    color: #CFD2CD;
+}
+a.footerref:hover{
+    color: #eea357;
+    font-weight: bold;
+}
