@@ -7,6 +7,10 @@ body{
     flex-direction: column;
     margin: 0;
     min-height: 100vh;
+    overflow-x: hidden;
+}
+main{
+    flex-grow: 1;
 }
 article{
     padding: 2%;
@@ -22,6 +26,11 @@ section.showcasecontainer{
 article.textcontent{
     flex: 2;
 }
+.mobilesafe{
+    display: none;
+    width: 100%;
+    height: auto;
+}
 article.imagecontent{
     flex: 1;
 }
@@ -35,8 +44,12 @@ article.imagecontent{
     section.showcasecontainer{
         flex-direction: column;
     }
-    .imagecontent{
+    .showcasecontainer .mobilesafe{
         order: -1;
+        display:flex;
+    }
+    .animations{
+        display: none;
     }
 }
 
@@ -48,6 +61,7 @@ header{
     align-items: center;
     height: 100px;
     overflow: hidden;
+    z-index: 10;
 }
 #logo{
     float: left;
@@ -81,12 +95,12 @@ header{
 }
 
 /*Nav*/
-
 nav{
     display: flex;
     align-items:center;
     background-color: #2E2C2A;
     margin-top: 0px;
+    z-index: 10;
 }
 nav ul{
     width: 100%;
@@ -110,7 +124,50 @@ a.navtext{
 nav ul li a:hover{
     font-weight: bold;
     color: white;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
 }
+/*animations and imaes*/
+#perfumeimg{
+    max-height: 45%;
+    width: auto;
+    position: absolute;
+    top: -100px; /* Starts above the screen */
+    right: 275px;
+    opacity: 0; /* Hidden at start */
+    animation: dropIn .5s ease-out 1.5s forwards; /* Delayed until branch appears */
+}
+@keyframes dropIn {
+    0% { top: -100px; opacity: 0; }
+    80% { top: 290px;}
+    100% { top: 280px; opacity: 1; }
+}
+
+#branch{
+    position: absolute;
+    right: -100%;
+    top: 500px; /* how far down from the top the branch is */
+    width: 600px; /* how wide the branch is */
+    animation: slideIn 1.5s ease-out forwards, bend 0.4s ease-out 1.8s forwards;;
+    overflow: hidden;
+}
+@keyframes slideIn {
+    0% { right: -100%; } /*0% = start of timeline!*/
+    80% {right: 0px;}
+    100% { right: -10px; }
+}
+@keyframes bend {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@media (max-width: 768px) {
+    .imagecontent{
+        display: none;
+    }
+}
+
 
 /*footer*/
 footer{

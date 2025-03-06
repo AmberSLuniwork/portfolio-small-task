@@ -8,6 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
+    <script type="" href="animations.js"></script>
     <title>Home</title>
 </head>
 <!--Header-->
@@ -48,23 +49,28 @@
     </article> -->
 
     <!--This is the main image and text content area.-->
-    <section class="showcasecontainer">
-        <article class="textcontent">
-            <h2>
-                Lorem ipsum
-            </h2>
-            <p class="subtitle"> Apple blossom & vanilla scented eau de parfum <br>
-            100ml</p>
-            <!--Note: do not put two subtitles under each other, they will start collidin with each other. 
-            Only put one under a headin. -->
-            <p>
-                Lorem ipsum dolor sit amet
-            </p>
-        </article>
-        <article class="imagecontent">
-            <img src="./assets/mainperfumepic.png">
-        </article>
-    </section>
+    <main>
+        <section class="showcasecontainer">
+            <article class="textcontent">
+                <h2>
+                    Lorem ipsum
+                </h2>
+                <p class="subtitle"> Apple blossom & vanilla scented eau de parfum <br>
+                100ml</p>
+                <!--Note: do not put two subtitles under each other, they will start collidin with each other. 
+                Only put one under a headin. -->
+                <p>
+                    Lorem ipsum dolor sit amet
+                </p>
+            </article>
+            <!---This is a div because it is largely content that does not contain information, so screen readers can skip over it.-->
+            <img class="mobilesafe"src="./assets/perfumetransparentbgwshadow.png">
+            <div class="animations">
+                <img id= "perfumeimg" src="./assets/perfumetransparentbg.png">
+                <img id="branch" src="./assets/branch.png">
+            </div>
+        </section>
+    </main>
 
     <!--Footer-->
     <footer>
