@@ -8,9 +8,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
-    <script type="" href="animations.js"></script>
+    <script src="animations.js"></script>
     <title>Home</title>
 </head>
+
+<body>
 <!--Header-->
 <header>
         <h1 id="logo">
@@ -21,7 +23,7 @@
         <!--Video and picture are decorative, does not need alt text. 
         leave it as null so assistive techs ignore it.-->
         <video autoplay muted loop id="headervideo">
-            <source src="./assets/headerbackroundvideocropped.mp4" type="video/mp4" alt="">
+            <source src="./assets/headerbackroundvideocropped.mp4" type="video/mp4">
         </video>
         <img id="headerimage" src="./assets/stillheaderbackround.png" alt="">
 </header>
@@ -36,31 +38,20 @@
         </li>
     </ul>
 </nav>
-<body>
-    <!--this is a test article to view all the text. 
-    Will comment out when it's no longer needed.
-    <article>
-        <h1> This is H1 </h1>
-        <h2> This is H2 </h2>
-        <h3> This is H3 </h3>
-        <h4> This is H4 </h4>
-        <h5> This is H5 </h5>
-        <p> This is body text </p>
-    </article> -->
+
 
     <!--This is the main image and text content area.-->
     <main>
         <section class="showcasecontainer">
+            <h1>
+                Lorem ipsum
+            </h1>
             <article class="textcontent">
-                <h2>
-                    Lorem ipsum
-                </h2>
-                <p class="subtitle"> Apple blossom & vanilla scented eau de parfum <br>
-                100ml</p>
-                <!--Note: do not put two subtitles under each other, they will start collidin with each other. 
-                Only put one under a headin. -->
+                <p class="subtitle">
+                    100ml
+                </p>
                 <p>
-                    Lorem ipsum dolor sit amet
+                    Formulated by John Doe 
                 </p>
             </article>
             <!---This is a div because it is largely content that does not contain information, so screen readers can skip over it.-->
