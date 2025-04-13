@@ -1,252 +1,113 @@
-html{
-    background-color: #FBFBF2;
-    margin: 0;
-}
 body{
-    display: flex;
-    flex-direction: column;
     margin: 0;
-    min-height: 100vh;
+    padding: 0;
     overflow-x: hidden;
 }
-main{
-    flex-grow: 1;
-}
-article{
-    padding: 2%;
-}
-
-/*Main article with the showcase and supplementary text.*/
-section.showcasecontainer{
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    max-width: 100%;
-}
-article.textcontent{
-    flex: 2;
-    order: 2;
-}
-.mobilesafe{
-    display: none;
-    width: 100%;
-    height: auto;
-}
-article.imagecontent{
-    flex: 1;
-    order: 1;
-}
-.imagecontent img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-@media (max-width:800px){
-    section.showcasecontainer{
-        flex-direction: column;
-    }
-    .showcasecontainer .mobilesafe{
-        order: -1;
-        display:flex;
-    }
-    .animations{
-        display: none;
-    }
-}
-
-/* header stuff. */
 header{
-    display: flex;
-    width: 100%;
-    background-color: #2E2C2A;
-    align-items: center;
-    height: 100px;
-    overflow: hidden;
-    z-index: 10;
-}
-#logo{
-    float: left;
-    width: 30%;
-    padding-left: 2%;
-    z-index: 1;
-    text-shadow: 0px 0px 20px #000000;
-}
-#headervideo{
-    margin: 0;
-    width: 70%;
-    float: right;
-    height: 100%;
-    object-fit: cover;
-}
-#headerimage{
-    display: none; /* want to hide this by default. */
-}
-@media (max-width: 975px) {
-    #headervideo {
-        display: none; /*The video starts to shrink and you can see the borders, so I'm replacing it with an image instead.*/
-    }
-    header{
-        background-image:url('./assets/stillheaderbackround.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    h1 #logo{
-        background-color: #2e2c2ad7;
-    }
-}
-
-/*Nav*/
-nav{
-    display: flex;
-    align-items:center;
-    background-color: #2E2C2A;
-    margin-top: 0px;
-    z-index: 10;
-}
-nav ul{
-    width: 100%;
-    list-style: none;
     text-align: center;
 }
-nav ul li{
-    display: inline-block;
-    padding: 10px;
+header section.banner{
+    padding: 75px;
+    height: 100px;
+    background-image:url(assets/vecteezy_white-apple-blossoms-and-pink-buds-on-a-green-background_47024339.jpeg);
+    background-size: cover;
 }
-
-a.navtext {
-    text-decoration: none;
-    font-size: 1.25em;
-    display: block;
+.salebanner{
+    background-color: #5E714B;
+    color: #F6F1E7;
+    padding: 1px;
+    
 }
-a.navtext{
-    color: #CFD2CD;
+nav{
+    background-color: #1D1322;
+    color:#F6F1E7;
+    padding: 20px 10%;
 }
-
-nav ul li a:hover{
-    font-weight: bold;
-    color: #ee7a57;
-    transform: scale(1.1);
-    transition: all 0.5s ease;
-}
-/*animations and imaes*/
-#perfumeimg{
-    max-height: 45%;
-    width: auto;
-    position: absolute;
-    top: -100px; /* Starts above the screen */
-    right: 275px;
-    opacity: 0; /* Hidden at start */
-    animation: dropIn .5s ease-out 1.5s forwards; /* Delayed until branch animation's nearly done */
-    z-index: 6;
-}
-#perfumeimg:hover{
-    transform: scale(1.2);
-    transition: 1s ease-out;
-}
-#textcontent{
-    animation: fadeIn 2s ease;
-}
-@keyframes fadeIn{
-    0%{
-        right: 500px;
-        opacity: 0;
-    }
-    100%{
-        opacity: 100;
-    }
-}
-@keyframes dropIn {
-    0% { top: -100px; opacity: 0; }
-    40%{opacity:0;}
-    100% { top: 280px; opacity: 1; }
-}
-
-#branch{
-    position: absolute;
-    right: -100%;
-    top: 500px; /* how far down from the top the branch is */
-    width: 40%; /* how wide the branch is */
-    animation: slideIn 1.5s ease-out forwards, bend 0.4s ease-out 1.8s forwards;;
-    overflow: hidden;
-}
-@keyframes slideIn {
-    0% { right: -100%; } /*0% = start of timeline*/
-    80% {right: 0px;}
-    100% { right: -10px; }
-}
-
-@media (max-width: 768px) {
-    .imagecontent{
-        display: none;
-    }
-}
-
-
-/*footer*/
-footer{
-    bottom: 0px;
+nav ul{
+    text-align: center;
+    align-items: center;
     display: flex;
-    background-color: #2E2C2A;
-    padding: 10px 2%;
     justify-content: space-between;
 }
-
-/* text */
-
-h1, h2, h3, h4, h5, a.navtext{
-    font-family:'Josefin Slab';
+footer{
+    font-size: small;
+    padding: 10px 5%;
+    background-color: #1D1322;
+    color: #F6F1E7;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
 }
-h1#logo{
-    color: #CFD2CD;
-    font-size: 3em;
-    font-weight: bold;
+footer > * {
+    flex: 1;
 }
-h1{
-    font-weight: bold;
-    font-size: 2.5em;
+form{
+    background-color: #F6F1E7;
+    color: #1D1322;
+    padding: 20px 25%;
 }
-h2{
-    color: #2E2C2A;
-    font-weight: bold;
-    font-size: 2em;
+form section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-h3{
-    color: #676561;
-    font-weight: bold;
-    font-size: 1.5em;
+form input{
+    width: 60%;
+    height: 45px;
+    border:none;
 }
-h4{
-    color: #676561;
-    font-weight: bold;
-    font-size: 1.25em;
+form button{
+    width: 40%;
+    height: 45px;
+    color: #F6F1E7;
+    background-color: #1D1322;
+    border: none;
+    font-size: small;
 }
-h5{
-    color: #676561;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.1em;
+/*text*/
+.logo{
+    color: #F6F1E7;
+    text-decoration: none;
+    font-family: "playfair display sc", "Times New Roman";
+    font-size: 5rem;
+    text-shadow: #1D1322 0px 0px 15px;
 }
-p{
-    font-family: 'Josefin Sans';
-    color: #2E2C2A;
-    font-size: 18px;
+nav ul li{
+    font-size: 1.5rem;
 }
-
-p.subtitle{
-    font-style: italic;
-    margin-left: 200px;
-    margin-top: -30px;
+h1, h2, h3, h4, h5, nav ul li .salebanner{
+    font-family: "playfair", "Times new roman";
 }
-
-footer p{
-    color: #CFD2CD;
+p, button{
+    font-family: "ledger", "garamond";
+    font-size: 1rem;
 }
-
-a.footerref{
-    color: #CFD2CD;
+.salebanner p{
+    font-size: 14px;
+    cursor: pointer;
 }
-a.footerref:hover{
-    color: #ee7a57;
-    font-weight: bold;
+.salebanner p:hover{
+    text-decoration: underline;
+}
+.nodeco{
+    text-decoration: none;
+    list-style-type: none;
+}
+/*media queries*/
+@media (max-width: 768px) {
+    footer{
+        flex-direction: column;
+    }
+    form section{
+        flex-direction: column;
+    }
+    form input{
+        width: 100%;
+    }
+    form button{
+        width: 50%;
+    }
+    form{
+        padding: 5%;
+    }
 }

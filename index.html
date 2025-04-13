@@ -4,75 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- fonts imported - Josefin Slab and Josefin Sans -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
-    </style>
+    <!-- fonts imported - Playfair, Playfair display SC and Ledger -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ledger&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <!--scripts-->
     <script src="animations.js"></script>
-    <title>Home</title>
+    <script src="buttons.js"></script>
+
+    <title>générique</title>
 </head>
-
 <body>
-<!--Header-->
-<header>
-        <h1 id="logo">
-            <a class='navtext' href="index.html">
-                Générique  
-            </a>
-        </h1>
-        <!--Video and picture are decorative, does not need alt text. 
-        leave it as null so assistive techs ignore it.-->
-        <video autoplay muted loop id="headervideo">
-            <source src="./assets/headerbackroundvideocropped.mp4" type="video/mp4">
-        </video>
-        <img id="headerimage" src="./assets/stillheaderbackround.png" alt="">
-</header>
-<!--Nav-->
-<nav>
-    <ul>
-        <li>
-            <a class='navtext'>Home</a>
-        </li>
-        <li>
-            <a class='navtext'href="#">About Us</a>
-        </li>
-    </ul>
-</nav>
-
-
-    <!--This is the main image and text content area.-->
-    <main>
-        <section class="showcasecontainer">
-            <h1>
-                Lorem ipsum
-            </h1>
-            <article class="textcontent">
-                <p class="subtitle">
-                    100ml
-                </p>
-                <p>
-                    Formulated by John Doe 
-                </p>
-            </article>
-            <!---This is a div because it is largely content that does not contain information, so screen readers can skip over it.-->
-            <img class="mobilesafe"src="./assets/perfumetransparentbgwshadow.png">
-            <div class="animations">
-                <img id= "perfumeimg" src="./assets/perfumetransparentbg.png">
-                <img id="branch" src="./assets/branch.png">
-            </div>
+    <header>
+        <section class="banner">
+            <a href="index.html" class="logo">générique</a>
         </section>
-    </main>
-
-    <!--Footer-->
+        <section class="salebanner">
+            <p>
+                NEW IN: EASTER SELECTION & GIFT SETS
+            </p>
+        </section>
+        <nav>
+            <ul class="nodeco">
+                <li>
+                    Home
+                </li>
+                <li>
+                    New in
+                </li>
+                <li>
+                    Our products
+                </li>
+                <li> 
+                    About Us
+                </li>
+                <li>
+                    Journal
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <form>
+        <p>
+            Sign up to our mailing list for first access to exclusive offers, seasonal scent launches, and behind-the-scenes stories from the studio. 
+            Our monthly newsletter also includes fragrance tips, natural ingredient spotlights, and inspiration for living beautifully. 
+            No spam — just quiet moments worth opening.
+        </p>
+        <hr>
+        <br>
+        <label for="email">Your Email:</label><br><br>
+        <section>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+            <button type="submit">Subscribe</button>
+        </section>    
+        <p class="formtext">You can unsubscribe from our emails at any time.</p>
+    </form> 
     <footer>
-        <p>
-            <b>Created by Amber Sudworth-Lee in 2025.</b>
-            <br><br>
-            Image credits are listed <a class="footerref" href="credits.html">here.</a> 
-        </p>
-        <p>
-            See the rest of my portfolio <a class="footerref" href="#">here.</a>
-        </p>
+        <section>
+            <p>© Amber Sudworth 2025.</p>
+            <p>See how I made this!</p>
+            <p>See the rest of my portfolio!</p>
+            <p>Image credits</p>
+        </section>
+        <section>
+            <p class="footerheader">Quick links</p>
+            <p>Find a store</p>
+            <p>Contact us</p>
+            <p>Shipping & returns</p>
+            <p>Our refund policies</p>
+            <p>Terms of Services</p>
+        </section>
+        <section>
+            <p>
+                Founded in the South of England by Jane Doe, a former botanist with a deep love for wild places and forgotten flowers, Générique was born from a quiet rebellion against the overcomplicated and overbranded. 
+                Tired of synthetic scents and sky-high price tags, Jane sought to create something different — a fragrance house rooted in simplicity, sincerity, and sustainability.
+                Each Générique scent is handcrafted in small batches, using ethically sourced essential oils and natural isolates. 
+                Générique is committed to transparency, minimal waste, and producing perfumes that feel as good to wear as they do to stand behind.
+            </p>
+        </section>
     </footer>
 </body>
 </html>
