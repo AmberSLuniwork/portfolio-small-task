@@ -7,10 +7,11 @@ header{
     text-align: center;
 }
 header section.banner{
-    padding: 75px;
-    height: 100px;
+    padding: 5% 50px;
+    height: 15vh;
     background-image:url(assets/vecteezy_white-apple-blossoms-and-pink-buds-on-a-green-background_47024339.jpeg);
-    background-size: cover;
+    background-size:cover;
+
 }
 .salebanner{
     background-color: #5E714B;
@@ -28,6 +29,9 @@ nav ul{
     align-items: center;
     display: flex;
     justify-content: space-between;
+}
+main section{
+    padding: 10px 5%;
 }
 footer{
     font-size: small;
@@ -69,18 +73,25 @@ form button{
     color: #F6F1E7;
     text-decoration: none;
     font-family: "playfair display sc", "Times New Roman";
-    font-size: 5rem;
-    text-shadow: #1D1322 0px 0px 15px;
+    font-size: 6vw;
+    text-shadow: #1c2b0e 0px 0px 50px;
 }
 nav ul li{
     font-size: 1.5rem;
 }
-h1, h2, h3, h4, h5, nav ul li .salebanner{
+h1, h2, h3, h4, h5, nav ul li .salebanner, .slogan{
     font-family: "playfair", "Times new roman";
 }
-p, button{
+p, button, footer section a{
     font-family: "ledger", "garamond";
     font-size: 1rem;
+}
+footer section a{
+    text-decoration: none;
+    color: #CFD2CD;
+}
+footer section a:hover{
+    color:#a2c085 ;
 }
 .salebanner p{
     font-size: 14px;
@@ -88,6 +99,12 @@ p, button{
 }
 .salebanner p:hover{
     text-decoration: underline;
+}
+.slogan{
+    font-size: 1.2rem;
+    color: #fffdfa;
+    font-style: italic;
+    padding-bottom: 30px;
 }
 .nodeco{
     text-decoration: none;
@@ -109,5 +126,8 @@ p, button{
     }
     form{
         padding: 5%;
+    }
+    .logo{
+        font-size: 50px;
     }
 }
