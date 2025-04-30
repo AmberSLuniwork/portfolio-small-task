@@ -2,27 +2,39 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    z-index: 2;
 }
 header{
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
 }
-header section.banner{
-    padding: 5% 50px;
-    height: 15vh;
-    background-image:url(assets/vecteezy_white-apple-blossoms-and-pink-buds-on-a-green-background_47024339.jpeg);
-    background-size:cover;
-
+header section.banner {
+    padding-top: 5vh;
+    background-image: url(assets/vecteezy_white-apple-blossoms-and-pink-buds-on-a-green-background_47024339.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 23vh;
+    overflow: hidden;
+}
+.banner a, .banner p {
+    position: relative;
+    text-align: center;
+    z-index: 1;
 }
 .salebanner{
     background-color: #5E714B;
     color: #F6F1E7;
-    padding: 1px;
-    
+    padding: 1vh
 }
 nav{
     background-color: #1D1322;
     color:#F6F1E7;
-    padding: 20px 10%;
+    padding: 1px 5%;
 }
 nav ul{
     text-align: center;
@@ -30,8 +42,27 @@ nav ul{
     display: flex;
     justify-content: space-between;
 }
+main:not(header){
+    margin-top: 46vh;
+    position: relative;
+    z-index: 2;
+    background-color: #F6F1E7;
+}
 main section{
     padding: 10px 5%;
+}
+#mobilebackup{
+    display: none;
+}
+.buttoncontainer{
+    margin: 1vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.buysection{
+    position: sticky;
+    top: 20%;
+    align-self: start;
 }
 footer{
     font-size: small;
@@ -46,6 +77,8 @@ footer > * {
     flex: 1;
 }
 form{
+    position: static;
+    z-index: 2;
     background-color: #F6F1E7;
     color: #1D1322;
     padding: 20px 25%;
@@ -73,7 +106,7 @@ form button{
     color: #F6F1E7;
     text-decoration: none;
     font-family: "playfair display sc", "Times New Roman";
-    font-size: 6vw;
+    font-size: 6rem;
     text-shadow: #1c2b0e 0px 0px 50px;
 }
 nav ul li{
@@ -82,9 +115,21 @@ nav ul li{
 h1, h2, h3, h4, h5, nav ul li .salebanner, .slogan{
     font-family: "playfair", "Times new roman";
 }
-p, button, footer section a{
+p, button, footer section a, ul li{
     font-family: "ledger", "garamond";
     font-size: 1rem;
+}
+.price{
+    font-size: 2rem;
+    margin: 0;
+}
+li{
+    padding: 1rem 0;
+}
+.productname{
+    font-size: 5rem;
+    margin: 0;
+    font-variant: small-caps;
 }
 footer section a{
     text-decoration: none;
@@ -112,6 +157,25 @@ footer section a:hover{
 }
 /*media queries*/
 @media (max-width: 768px) {
+    main{
+        flex-direction: column-reverse;
+    }
+    .imagecontainer{
+        display: none;
+    }
+    #mobilebackup{
+        display: block;
+    }
+    .buysection{
+        position: static;
+    }
+    .showcase{
+        flex-direction: column;
+        gap: 0;   
+    }
+    .pictureselect{
+        display: none;
+    }
     footer{
         flex-direction: column;
     }

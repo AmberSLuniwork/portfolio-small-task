@@ -40,40 +40,76 @@
                 <li> 
                     About Us
                 </li>
-                <li>
-                    Journal
-                </li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="picturecontainer">
-            <img src="assets/Showcase picture.png" alt="">
-            <img src="assets/perfume-bottle/perfume50ml.png" alt="">
-            <img src="assets/perfume-bottle/perfumeduo.png" alt="">
-            <img src="assets/perfume-bottle/perfumefront.png" alt="">
+    <main style="display: flex;">
+        <section class="productshowcase" style="flex-basis: 50%;">
+            <div class="imagecontainer">
+                <img style="width: 100%;" src="assets/Showcase picture.png">               
+            </div>
+            <article class="productdescription">
+                <h2>
+                    About
+                </h2>
+                <p>
+                    Ambrosia embodies the effortless elegance of nature, blending fruity freshness and delicate florals to create a scent that is both uplifting and refined. 
+                    Inspired by the purity of natural ingredients, this fragrance opens with a burst of bright citrus, evoking the crispness of freshly picked fruit under the sun. 
+                </p>
+                <p>
+                    Housed in a beautifully crafted amber-colored glass bottle, this perfume is designed to protect the purity of the fragrance while providing a stunning visual display. 
+                    Générique invites you to indulge in a luxury fragrance that brings nature's finest notes into your everyday life, without the luxury price tag.
+                </p>
+                <p>
+                    Available in 50ml and 100ml sizes, Ambrosia is perfect for both personal use and a an elegant gift for someone special.
+                </p>
+                <p>
+                    The heart unveils a sophisticated floral bouquet, where lush jasmine, soft peony, and gentle lily of the valley intertwine, creating a vibrant and effortlessly feminine core. The base notes settle into a warm, grounding finish with subtle hints of amber and sandalwood, enhancing the natural sweetness with a touch of depth and warmth. 
+                </p>
+                
+            </article>
+            <article class="deliveryinfo">
+                <h2>Delivery</h2>
+                <ul class="nodeco">
+                    <li>
+                        Enjoy free delivery on orders over £40.
+                    </li>
+                    <li>
+                        We're always available if you need to ask anything. Contact us at <strong>loremipsum@generique.com.</strong> 
+                    </li>
+                </ul>
+            </article>
         </section>
-        <section>
+        <section class="buysection">
+            <div>
+                <h1 class="productname">Ambrosia</h1>
+                <p class="price">£25</p>
+            </div>
+            <hr>
+            <h2>Fragrance at a glance</h2>
+            <p> <strong>
+                Top notes: Citrus<br>
+                Heart: Jasmine, Peony & Lily of the Valley<br>
+                Base notes: Amber & Sandalwood
+            </strong></p>
             <p>
-            Ambrosia embodies the effortless elegance of nature, blending fruity freshness and delicate florals to create a scent that is both uplifting and refined. 
-            Inspired by the purity of natural ingredients, this fragrance opens with a burst of bright citrus, evoking the crispness of freshly picked fruit under the sun. 
+                Whether worn for a casual day out or an elegant evening event, Ambrosia offers a refreshing and timeless scent.
             </p>
-            <p>
-                Housed in a beautifully crafted amber-colored glass bottle, this perfume is designed to protect the purity of the fragrance while providing a stunning visual display. 
-                Générique invites you to indulge in a luxury fragrance that brings nature's finest notes into your everyday life, without the luxury price tag.
-            </p>
-            <p>
-                Available in 50ml and 100ml sizes, Ambrosia is perfect for both personal use and a an elegant gift for someone special.
-            </p>
-            <p>
-                The heart unveils a sophisticated floral bouquet, where lush jasmine, soft peony, and gentle lily of the valley intertwine, creating a vibrant and effortlessly feminine core. The base notes settle into a warm, grounding finish with subtle hints of amber and sandalwood, enhancing the natural sweetness with a touch of depth and warmth. 
-            </p>
-            <p>
-                Whether worn for a casual day out or an elegant evening event, Générique offers a refreshing and timeless scent that feels both luxurious and accessible.
-            </p>
+            <hr>
+            <img id="mobilebackup" src="assets/Showcase picture.png" style="width: 100%; height: auto;">
+            <p>Size: <i>100ml</i></p>
+            <div class="buttoncontainer">
+                <button class="amount">
+                <p> - 1 + </p>
+                </button>
+                <button class="addtobasket">
+                    Add to your basket
+                </button>
+            </div>
+            
         </section>
-        
     </main>
+    
     <form>
         <p>
             Sign up to our mailing list for first access to exclusive offers, seasonal scent launches, and behind-the-scenes stories from the studio. 
@@ -107,11 +143,15 @@
         </section>
         <section>
             <p>
-                Founded in the South of England by Jane Doe, a former botanist with a deep love for wild places and forgotten flowers, Générique was born from a quiet rebellion against the overcomplicated and overbranded. 
+                Founded in the South of England by Jane Doe, a former botanist with a deep love for wild places and forgotten flowers, Générique was born from a quiet rebellion against the overcomplicated and overbranded.
+            </p>
+            <p>
                 Tired of synthetic scents and sky-high price tags, Jane sought to create something different — a fragrance house rooted in simplicity, sincerity, and sustainability.
                 Each Générique scent is handcrafted in small batches, using ethically sourced essential oils and natural isolates. 
-                Générique is committed to transparency, minimal waste, and producing perfumes that feel as good to wear as they do to stand behind.
-            </p>
+            </p>     
+            <p>
+                Générique is committed to transparency, minimal waste, and producing perfumes that feel as good to wear as they do to stand behind. <u>Read more about our ethics policy here.</u>
+            </p>            
         </section>
     </footer>
 </body>
