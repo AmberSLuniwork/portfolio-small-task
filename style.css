@@ -32,15 +32,25 @@ header section.banner {
     padding: 1vh
 }
 nav{
+    display: block;
+    margin: auto;
     background-color: #1D1322;
     color:#F6F1E7;
     padding: 1px 5%;
+    align-content: center;
+}
+#navbutt{
+    display: none;
+    padding: 10px;
+    border: none;
+    color: #f6f1e7;
+    background: #fff0;
 }
 nav ul{
     text-align: center;
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 main:not(header){
     margin-top: 46vh;
@@ -65,6 +75,7 @@ main section{
     align-self: start;
 }
 footer{
+    position: relative;
     font-size: small;
     padding: 10px 5%;
     background-color: #1D1322;
@@ -72,6 +83,7 @@ footer{
     display: flex;
     gap: 10px;
     justify-content: space-evenly;
+    z-index: 3;
 }
 footer > * {
     flex: 1;
@@ -192,6 +204,19 @@ footer section a:hover{
         padding: 5%;
     }
     .logo{
-        font-size: 50px;
+        font-size: 4rem;
+    }
+    .main{
+        margin-top: 48vh;
+    }
+    nav{
+        height: 11vh;
+    }
+    nav ul{
+        display: none;
+    }
+    #navbutt{
+        display: block;
+        padding: 5%;
     }
 }
